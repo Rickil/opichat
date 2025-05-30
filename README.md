@@ -1,6 +1,6 @@
 # OPIChat
 
-OPIChat est une application de messagerie instantanée inspirée d'IRC, développée en C. Elle comprend un serveur et un client, permettant des communications en temps réel via des sockets.([GitHub][1])
+OPIChat est une application de messagerie instantanée inspirée d'IRC, développée en C. Elle comprend un serveur et un client, permettant des communications en temps réel via des sockets.
 
 ## Fonctionnalités
 
