@@ -92,36 +92,6 @@ struct connection_t *accept_client(int epoll_instance, int server_socket,
     return add_client(connection, fd_client);
 }
 
-/*
-int check_comm(int res, struct connection_t **connection, int client_fd)
-{
-    if (res < 0)
-        return 0;
-
-    if (res == 0)
-    {
-        fprintf(stdout, "Client disconnected\n");
-        *connection = remove_client(*connection, client_fd);
-        return 0;
-    }
-    return 1;
-}*/
-
-/*
-struct connection_t *broadcast(char *buffer, size_t len, int flags, struct
-connection_t *connection)
-{
-    if (connection)
-    {
-        connection->next = broadcast(buffer, len, flags, connection->next);
-        int res = send(connection->client_socket, buffer, strlen(buffer),
-flags); if (!check_comm(res, &connection, connection->client_socket)) return
-connection;
-    }
-
-    return connection;
-}*/
-
 struct connection_t *old_communicate(int client_socket,
                                      struct connection_t *connection)
 {

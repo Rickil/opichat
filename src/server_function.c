@@ -22,23 +22,6 @@ int check_comm(int res, struct connection_t **connection, int client_fd)
     return 1;
 }
 
-/*
-char *broadcast(char *buffer, char *sender, int flags, struct connection_t
-*connection)
-{
-    if (connection)
-    {
-
-        connection->next = broadcast(buffer, sender_socket, flags,
-connection->next); buffer = strcat(buffer, "From="); buffer = strcat(buffer,
-sender); struct payload *payload = int res = send(connection->client_socket,
-buffer, strlen(buffer), flags); if (!check_comm(res, &connection,
-connection->client_socket)) return connection;
-    }
-
-    return connection;
-}*/
-
 struct connection_t *my_send(int socket, char *buffer, int flags,
                              struct connection_t *connection)
 {
