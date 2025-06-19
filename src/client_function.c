@@ -27,7 +27,7 @@ char *get_username(char *parameters)
 static int what(char *command)
 {
     if (!strcmp(command, "PING") || !strcmp(command, "LIST-USERS"))
-        return 1;
+        return 0;
     if (!strcmp(command, "BROADCAST") || !strcmp(command, "LOGIN"))
         return 1;
     if (!strcmp(command, "SEND-DM"))

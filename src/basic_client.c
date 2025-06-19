@@ -95,7 +95,7 @@ void *communicate_recv(void *void_fd_thread)
     // receive part
     while (fd_thread->continue_thread)
     {
-        char *buffer2 = calloc(sizeof(struct payload) + 5, sizeof(char));
+        char *buffer2 = calloc(DEFAULT_BUFFER_SIZE, sizeof(char));
 
         ssize_t res = 1;
         res = recv(server_socket, buffer2, DEFAULT_BUFFER_SIZE - 1, flags);

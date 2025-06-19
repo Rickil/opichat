@@ -90,7 +90,7 @@ struct payload *to_payload(char *buffer)
     free(token_command);
 
     // parameters
-    if (strcmp(payload->command, "SEND-DM"))
+    if (strcmp(payload->command, "SEND-DM") || strcmp(payload->command, "BROADCAST"))
     {
         my_strncpy(payload->parameters, MAX_PARAMETERS_SIZE, "\n");
         index++;
